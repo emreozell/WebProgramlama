@@ -8,7 +8,7 @@ namespace WebApplication2.Models
     public class Marka
     {
         public int Id { get; set; }
-        public int Ad { get; set; }
+        public string Ad { get; set; }
 
     }
 }

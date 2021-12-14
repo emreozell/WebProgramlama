@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApplication2.Data;
 
 namespace WebApplication2.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211214081152_ss")]
+    partial class ss
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -256,8 +258,8 @@ namespace WebApplication2.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Ad")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Ad")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -280,13 +282,16 @@ namespace WebApplication2.Migrations
                     b.Property<int>("Fiyat")
                         .HasColumnType("int");
 
-                    b.Property<int>("IndirimId")
+                    b.Property<int?>("IndirimId")
                         .HasColumnType("int");
 
                     b.Property<int?>("KategoriId")
                         .HasColumnType("int");
 
-                    b.Property<int>("MarkaId")
+                    b.Property<string>("MarkaAd")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("MarkaId")
                         .HasColumnType("int");
 
                     b.Property<string>("Resim")
@@ -364,9 +369,7 @@ namespace WebApplication2.Migrations
                 {
                     b.HasOne("WebApplication2.Models.Indirim", "Indirim")
                         .WithMany()
-                        .HasForeignKey("IndirimId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IndirimId");
 
                     b.HasOne("WebApplication2.Models.Kategori", "Kategori")
                         .WithMany()
@@ -374,9 +377,7 @@ namespace WebApplication2.Migrations
 
                     b.HasOne("WebApplication2.Models.Marka", "Marka")
                         .WithMany()
-                        .HasForeignKey("MarkaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MarkaId");
 
                     b.Navigation("Indirim");
 

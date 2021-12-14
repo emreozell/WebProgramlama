@@ -19,9 +19,6 @@
                 @Html.DisplayNameFor(model => model.Resim)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MarkaAd)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Fiyat)
             </th>
             <th>
@@ -33,6 +30,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.Aciklama)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kategori)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marka)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Indirim)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -43,10 +49,7 @@
                 @Html.DisplayFor(modelItem => item.Ad)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Resim)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MarkaAd)
+                <img src="~/images/@Url.Content(item.Resim)" class="d-block w-100 h-100" asp-append-version="true" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Fiyat)
@@ -59,6 +62,15 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Aciklama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kategori.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marka.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Indirim.Id)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
