@@ -1,0 +1,49 @@
+﻿@model IEnumerable<YiyecekveGıda.Models.Category>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryName)
+            </th>
+          <th></th>
+            <th>
+                Update
+            </th>
+            <th>
+                Delete
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryDescription)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CategoryID" class="btn btn-danger">Edit</a>
+
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.CategoryID" class="btn btn-secondary">Delete</a>
+                </td>
+            </tr>
+            
+                
+            
+        }
+    </tbody>
+</table>
+<a asp-action="Create" class="btn btn-primary">Create New</a>
