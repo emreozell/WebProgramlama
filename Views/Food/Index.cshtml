@@ -2,11 +2,14 @@
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
 }
 
 <h1>Index</h1>
 
-
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
 <table class="table">
     <thead>
         <tr>
@@ -20,7 +23,7 @@
                 @Html.DisplayNameFor(model => model.Price)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ImageURL)
+                @Html.DisplayNameFor(model => model.Resim)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Stock)
@@ -28,51 +31,36 @@
             <th>
                 @Html.DisplayNameFor(model => model.Category)
             </th>
-            <th>
-                Edit
-            </th>
-            <th>
-                Details
-            </th>
-            <th>
-                Update
-            </th>
-
+            <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Price)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ImageURL)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Stock)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Category.CategoryName)
-                </td>
-
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.FoodID" class="btn btn-danger">Edit</a>
-                </td>
-                <td>   <a asp-action="Details" asp-route-id="@item.FoodID" class="btn btn-secondary">Details</a> </td>
-                <td>
-                    <a asp-action="Delete" asp-route-id="@item.FoodID" class="btn btn-primary">Delete</a>
-                </td>
-            </tr>
-        }
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                <img src="~/images/@Url.Content(item.Resim)" style="width:250px; height:200px"  />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.CategoryID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.FoodID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.FoodID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.FoodID">Delete</a>
+            </td>
+        </tr>
+}
     </tbody>
 </table>
-
-    <a asp-action="Create" class="btn btn-primary">Create New</a>

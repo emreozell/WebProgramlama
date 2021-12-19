@@ -161,10 +161,13 @@ C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Category\
 C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Category\Details.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Category\Edit.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Category\Index.cshtml.g.cs
+C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs
+C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Shared\_SiteLayout.cshtml.g.cs
+C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Default\Index.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Food\Create.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Food\Delete.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Food\Details.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Food\Edit.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Food\Index.cshtml.g.cs
-C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\WebProgramlama.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Vitrin\Index.cshtml.g.cs
