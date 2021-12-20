@@ -319,6 +319,14 @@
         "runtime": {
           "WebProgramlama.dll": {}
         },
+        "resources": {
+          "en-US/WebProgramlama.resources.dll": {
+            "locale": "en-US"
+          },
+          "tr-TR/WebProgramlama.resources.dll": {
+            "locale": "tr-TR"
+          }
+        },
         "compile": {
           "WebProgramlama.dll": {}
         }

@@ -169,5 +169,12 @@ C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Food\Dele
 C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Food\Details.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Food\Edit.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Food\Index.cshtml.g.cs
-C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\WebProgramlama.csproj.AssemblyReference.cache
 C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\Razor\Views\Vitrin\Index.cshtml.g.cs
+C:\Users\ASUS\source\repos\WebProgramlama\bin\Debug\net5.0\en-US\WebProgramlama.resources.dll
+C:\Users\ASUS\source\repos\WebProgramlama\bin\Debug\net5.0\tr-TR\WebProgramlama.resources.dll
+C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\WebProgramlama.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\WebProgramlama.Resources.SharedResource.en-US.resources
+C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\WebProgramlama.Resources.SharedResource.tr-TR.resources
+C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\WebProgramlama.csproj.GenerateResource.cache
+C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\en-US\WebProgramlama.resources.dll
+C:\Users\ASUS\source\repos\WebProgramlama\obj\Debug\net5.0\tr-TR\WebProgramlama.resources.dll

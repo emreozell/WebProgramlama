@@ -67,6 +67,7 @@ namespace WebProgramlama.Controllers
             if (ModelState.IsValid)
             {
                 string wwwRootPath = _hostEnvironment.WebRootPath;
+
                 string fileName = Path.GetFileNameWithoutExtension(food.ImageFile.FileName);
                 string extension = Path.GetExtension(food.ImageFile.FileName);
                 food.Resim = fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;

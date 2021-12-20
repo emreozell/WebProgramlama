@@ -1,7 +1,7 @@
 ﻿@{
     Layout = null;
 }
-
+@inject LanguageService language
 <!--
 author: W3layouts
 author URL: http://w3layouts.com
@@ -35,84 +35,77 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script type="text/javascript" src="~/web/js/move-top.js"></script>
     <script type="text/javascript" src="~/web/js/easing.js"></script>
     <script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
     </script>
     <!-- start-smoth-scrolling -->
 </head>
 
 <body>
     <!-- header -->
-    <div class="agileits_header">
-        <div class="w3l_offers">
-            <a href="products.html">Today's special Offers !</a>
+    <div class="agileits_header" style="background-color:aqua">
+        <div class="w3l_offers" style="background-color:aqua">
+            <a style="background-color:aqua">@language.Getkey("welcome")</a>
         </div>
-        <div class="w3l_search">
-            <form action="#" method="post">
-                <input type="text" name="Product" value="Search a product..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search a product...';}" required="">
-                <input type="submit" value=" ">
-            </form>
-        </div>
-        <div class="product_list_header">
-            <form action="#" method="post" class="last">
-                <fieldset>
-                    <input type="hidden" name="cmd" value="_cart" />
-                    <input type="hidden" name="display" value="1" />
-                    <input type="submit" name="submit" value="View your cart" class="button" />
-                </fieldset>
-            </form>
-        </div>
-        <div class="w3l_header_right">
+
+
+        <div class="w3l_header_right" style="float:right">
             <ul>
                 <li class="dropdown profile_details_drop">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></a>
                     <div class="mega-dropdown-menu">
                         <div class="w3ls_vegetables">
                             <ul class="dropdown-menu drp-mnu">
-                                <li><a asp-area="Identity" asp-page="/Account/Register">Register</a></li>
-                                <li><a asp-area="Identity" asp-page="/Account/Login">Login</a></li>
+                                <li><a asp-area="Identity" asp-page="/Account/Register">@language.Getkey("Register")</a></li>
+                                <li><a asp-area="Identity" asp-page="/Account/Login">@language.Getkey("Login")</a></li>
                             </ul>
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
-       
+        <div class="w3ls_logo_products_left1" style="float:right">
+            <ul class="special_items">
+                <li><a asp-route-culture="tr-TR" asp-controller="Default" asp-action="ChangeLanguage">Türkçe</a>-</li>
+                <li><a asp-route-culture="en-US" asp-controller="Default" asp-action="ChangeLanguage">English</a></li>
+            </ul>
+        </div>
+
     </div>
     <!-- script-for sticky-nav -->
     <script>
-	$(document).ready(function() {
-		 var navoffeset=$(".agileits_header").offset().top;
-		 $(window).scroll(function(){
-			var scrollpos=$(window).scrollTop();
-			if(scrollpos >=navoffeset){
-				$(".agileits_header").addClass("fixed");
-			}else{
-				$(".agileits_header").removeClass("fixed");
-			}
-		 });
+        $(document).ready(function () {
+            var navoffeset = $(".agileits_header").offset().top;
+            $(window).scroll(function () {
+                var scrollpos = $(window).scrollTop();
+                if (scrollpos >= navoffeset) {
+                    $(".agileits_header").addClass("fixed");
+                } else {
+                    $(".agileits_header").removeClass("fixed");
+                }
+            });
 
-	});
+        });
     </script>
     <!-- //script-for sticky-nav -->
     <div class="logo_products">
         <div class="container">
             <div class="w3ls_logo_products_left">
-                <h1><a href="index.html"><span>Grocery</span> Store</a></h1>
+                <h1><a><span>@language.Getkey("Food")</span>@language.Getkey("Site")</a></h1>
             </div>
             <div class="w3ls_logo_products_left1">
                 <ul class="special_items">
-                    <li><a asp-area="" asp-controller="Default" asp-action="Index">Anasayfa</a><i>/</i></li>
-                    <li><a asp-area="" asp-controller="Vitrin" asp-action="Index">Vitrin</a><i>/</i></li>
+                    <li><a asp-area="" asp-controller="Default" asp-action="Index">@language.Getkey("Home")</a><i>/</i></li>
+                    <li><a asp-area="" asp-controller="Vitrin" asp-action="Index">@language.Getkey("Products")</a><i>/</i></li>
                 </ul>
             </div>
             <div class="w3ls_logo_products_left1">
                 <ul class="phone_email">
-                    <li><i ></i>b191210086</li>
+                    <li><i></i>b191210086</li>
                     <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:store@grocery.com">emre.ozel1@ogr.sakarya.edu.tr</a></li>
                 </ul>
             </div>
@@ -120,13 +113,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
     <!-- //header -->
- 
     <!-- top-brands -->
-   
-        
-           
-            @RenderBody()
- 
-   
+
+
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+
+
 </body>
 </html>
