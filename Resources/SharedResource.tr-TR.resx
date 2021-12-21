@@ -120,6 +120,9 @@
   <data name="Food" xml:space="preserve">
     <value>Yiyecek</value>
   </data>
+  <data name="hello" xml:space="preserve">
+    <value>Merhaba</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Anasayfa</value>
   </data>
