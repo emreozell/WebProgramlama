@@ -1,6 +1,6 @@
 using System;
 
-namespace WebProgramlama.Models
+namespace WebOdev.Models
 {
     public class ErrorViewModel
     {

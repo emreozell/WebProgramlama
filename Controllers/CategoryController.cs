@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using WebProgramlama.Data;
-using WebProgramlama.Models;
+using WebOdev.Data;
+using WebOdev.Models;
 
-namespace WebProgramlama.Controllers
+namespace WebOdev.Controllers
 {
     public class CategoryController : Controller
     {
@@ -21,7 +20,6 @@ namespace WebProgramlama.Controllers
         }
 
         // GET: Category
-        
         public async Task<IActionResult> Index()
         {
             return View(await _context.Categories.ToListAsync());
@@ -56,7 +54,7 @@ namespace WebProgramlama.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CategoryID,CategoryName,CategoryDescription")] Category category)
+        public async Task<IActionResult> Create([Bind("CategoryID,CategoryName")] Category category)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +86,7 @@ namespace WebProgramlama.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CategoryID,CategoryName,CategoryDescription")] Category category)
+        public async Task<IActionResult> Edit(int id, [Bind("CategoryID,CategoryName")] Category category)
         {
             if (id != category.CategoryID)
             {

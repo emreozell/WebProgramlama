@@ -7498,11 +7498,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\WebProgramlama\\WebProgramlama.csproj",
-      "projectName": "WebProgramlama",
-      "projectPath": "C:\\Users\\ASUS\\source\\repos\\WebProgramlama\\WebProgramlama.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\WebOdev\\WebOdev.csproj",
+      "projectName": "WebOdev",
+      "projectPath": "C:\\Users\\ASUS\\source\\repos\\WebOdev\\WebOdev.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\source\\repos\\WebProgramlama\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\source\\repos\\WebOdev\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

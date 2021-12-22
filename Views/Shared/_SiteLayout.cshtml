@@ -1,125 +1,35 @@
-﻿@{
-    Layout = null;
-}
-@inject LanguageService language
-
-
-
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Grocery Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
-    <!-- for-mobile-apps -->
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Grocery Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-    <script type="application/x-javascript">
-        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-               function hideURLbar(){ window.scrollTo(0,1); } </script>
- 
-    <link href="~/web/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="~/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
-  
-    <link href="~/web/css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
-   
-
-    <script src="~/web/js/jquery-1.11.1.min.js"></script>
-    <!-- //js -->
-    <link href='//fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-
-
-    <script type="text/javascript" src="~/web/js/move-top.js"></script>
-    <script type="text/javascript" src="~/web/js/easing.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function ($) {
-            $(".scroll").click(function (event) {
-                event.preventDefault();
-                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
-            });
-        });
-    </script>
-    <!-- start-smoth-scrolling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-
 <body>
-    <!-- header -->
-    <div class="agileits_header" style="background-color:aqua">
-        <div class="w3l_offers" style="background-color:aqua">
-            <a style="background-color:aqua">@language.Getkey("welcome")</a>
-        </div>
 
-
-        <div class="w3l_header_right" style="float:right">
-            <ul>
-                <li class="dropdown profile_details_drop">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></a>
-                    <div class="mega-dropdown-menu">
-                        <div class="w3ls_vegetables">
-                            <ul class="dropdown-menu drp-mnu">
-                                <li><a asp-area="Identity" asp-page="/Account/Register">@language.Getkey("Register")</a></li>
-                                <li><a asp-area="Identity" asp-page="/Account/Login">@language.Getkey("Login")</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Manavcım</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Anasayfa</a></li>
+                <li><a asp-controller="Category" asp-action="Index">Categories</a></li>
+                <li><a asp-controller="Food" asp-action="Index">Products</a></li>
+                <li><a asp-controller="Chart" asp-action="Index">Products Chart</a></li>
+                <li><a asp-controller="Chart" asp-action="Statistics">Statistics</a></li>
+                <li><a  asp-area="Identity" asp-page="/Account/Login" >Login</a></li>
+                <li><a  asp-area="Identity" asp-page="/Account/Register">Register</a></li>
             </ul>
-        </div>
-        <div class="w3ls_logo_products_left1" style="float:right">
-            <ul class="special_items">
-                <li><a asp-route-culture="tr-TR" asp-controller="Default" asp-action="ChangeLanguage">Türkçe</a>-</li>
-                <li><a asp-route-culture="en-US" asp-controller="Default" asp-action="ChangeLanguage">English</a></li>
-            </ul>
-        </div>
+        </div> 
+    </nav>
 
+    <div class="container">
+       @RenderBody()
     </div>
-    <!-- script-for sticky-nav -->
-    <script>
-        $(document).ready(function () {
-            var navoffeset = $(".agileits_header").offset().top;
-            $(window).scroll(function () {
-                var scrollpos = $(window).scrollTop();
-                if (scrollpos >= navoffeset) {
-                    $(".agileits_header").addClass("fixed");
-                } else {
-                    $(".agileits_header").removeClass("fixed");
-                }
-            });
-
-        });
-    </script>
-    <!-- //script-for sticky-nav -->
-    <div class="logo_products">
-        <div class="container">
-            <div class="w3ls_logo_products_left">
-                <h1><a><span>@language.Getkey("Food")</span>@language.Getkey("Site")</a></h1>
-            </div>
-            <div class="w3ls_logo_products_left1">
-                <ul class="special_items">
-                    <li><a asp-area="" asp-controller="Default" asp-action="Index">@language.Getkey("Home")</a><i>/</i></li>
-                    <li><a asp-area="" asp-controller="Vitrin" asp-action="Index">@language.Getkey("Products")</a><i>/</i></li>
-                </ul>
-            </div>
-            <div class="w3ls_logo_products_left1">
-                <ul class="phone_email">
-                    <li><i></i>b191210086</li>
-                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:store@grocery.com">emre.ozel1@ogr.sakarya.edu.tr</a></li>
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-    </div>
-    <!-- //header -->
-    <!-- top-brands -->
-
-
-
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-
-
 
 </body>
 </html>

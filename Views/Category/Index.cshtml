@@ -1,49 +1,42 @@
-﻿@model IEnumerable<WebProgramlama.Models.Category>
+﻿@model IEnumerable<WebOdev.Models.Category>
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
 }
 
 <h1>Index</h1>
 
-
-<table class="table table-bordered">
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.CategoryName)
             </th>
             <th></th>
-            <th>
-                Update
-            </th>
-            <th>
-                Delete
-            </th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CategoryName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CategoryDescription)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.CategoryID" class="btn btn-danger">Edit</a>
-
-                </td>
-                <td>
-                    <a asp-action="Delete" asp-route-id="@item.CategoryID" class="btn btn-secondary">Delete</a>
-                </td>
-            </tr>
-
-
-
-        }
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CategoryID" class="btn btn-primary">Edit</a> 
+                
+                
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.CategoryID" class="btn btn-success">Details</a> 
+            </td>
+            <td>
+                <a asp-action="Delete" asp-route-id="@item.CategoryID" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+}
     </tbody>
 </table>
-<a asp-action="Create" class="btn btn-primary">Create New</a>

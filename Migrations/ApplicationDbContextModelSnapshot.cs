@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using WebProgramlama.Data;
+using WebOdev.Data;
 
-namespace WebProgramlama.Migrations
+namespace WebOdev.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -219,15 +219,12 @@ namespace WebProgramlama.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("WebProgramlama.Models.Category", b =>
+            modelBuilder.Entity("WebOdev.Models.Category", b =>
                 {
                     b.Property<int>("CategoryID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CategoryDescription")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CategoryName")
                         .HasColumnType("nvarchar(max)");
@@ -237,7 +234,7 @@ namespace WebProgramlama.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("WebProgramlama.Models.Food", b =>
+            modelBuilder.Entity("WebOdev.Models.Food", b =>
                 {
                     b.Property<int>("FoodID")
                         .ValueGeneratedOnAdd()
@@ -253,8 +250,8 @@ namespace WebProgramlama.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
+                    b.Property<string>("Price")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Resim")
                         .HasColumnType("nvarchar(max)");
@@ -320,9 +317,9 @@ namespace WebProgramlama.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("WebProgramlama.Models.Food", b =>
+            modelBuilder.Entity("WebOdev.Models.Food", b =>
                 {
-                    b.HasOne("WebProgramlama.Models.Category", "Category")
+                    b.HasOne("WebOdev.Models.Category", "Category")
                         .WithMany("Foods")
                         .HasForeignKey("CategoryID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -331,7 +328,7 @@ namespace WebProgramlama.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("WebProgramlama.Models.Category", b =>
+            modelBuilder.Entity("WebOdev.Models.Category", b =>
                 {
                     b.Navigation("Foods");
                 });

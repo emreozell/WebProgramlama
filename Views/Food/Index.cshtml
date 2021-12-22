@@ -1,8 +1,8 @@
-﻿@model IEnumerable<WebProgramlama.Models.Food>
+﻿@model IEnumerable<WebOdev.Models.Food>
 
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
 }
 
 <h1>Index</h1>
@@ -47,13 +47,13 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                <img src="~/images/@Url.Content(item.Resim)" style="width:250px; height:200px"  />
+                @Html.DisplayFor(modelItem => item.Resim)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Stock)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Category.CategoryID)
+                @Html.DisplayFor(modelItem => item.Category.CategoryName)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.FoodID">Edit</a> |

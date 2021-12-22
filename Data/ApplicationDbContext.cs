@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using WebProgramlama.Models;
+using WebOdev.Models;
 
-namespace WebProgramlama.Data
+namespace WebOdev.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
@@ -13,8 +13,8 @@ namespace WebProgramlama.Data
             : base(options)
         {
         }
-        public DbSet<Food> Foods { get; set; }
+
+        public DbSet <Food> Foods { get; set; }
         public DbSet<Category> Categories { get; set; }
-        
     }
 }

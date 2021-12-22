@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using WebProgramlama.Models;
+using WebOdev.Models;
 
-namespace WebProgramlama.Controllers
+namespace WebOdev.Controllers
 {
     public class HomeController : Controller
     {
