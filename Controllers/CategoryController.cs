@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,7 +10,8 @@ using WebOdev.Data;
 using WebOdev.Models;
 
 namespace WebOdev.Controllers
-{
+{   
+  [Authorize(Roles ="Admin")]
     public class CategoryController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -18,8 +20,10 @@ namespace WebOdev.Controllers
         {
             _context = context;
         }
+      
 
-        // GET: Category
+        // GET: Category[
+        //[Authorize] //Burda Authorize kullandığımız için categorynin indexine giderken admin paneline yönlendirecek.
         public async Task<IActionResult> Index()
         {
             return View(await _context.Categories.ToListAsync());

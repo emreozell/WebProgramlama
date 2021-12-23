@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ using WebOdev.Models;
 
 namespace WebOdev.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class FoodController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -82,7 +84,7 @@ namespace WebOdev.Controllers
             {
                 return NotFound();
             }
-            ViewData["CategoryID"] = new SelectList(_context.Categories, "CategoryID", "CategoryID", food.CategoryID);
+            ViewData["CategoryName"] = new SelectList(_context.Categories, "CategoryID", "CategoryName", food.CategoryID);
             return View(food);
         }
 

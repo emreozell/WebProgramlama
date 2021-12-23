@@ -51,7 +51,6 @@ C:\Users\ASUS\source\repos\WebOdev\bin\Debug\net5.0\runtimes\win-x86\native\Micr
 C:\Users\ASUS\source\repos\WebOdev\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\ASUS\source\repos\WebOdev\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\ASUS\source\repos\WebOdev\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\WebOdev.csproj.AssemblyReference.cache
 C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\WebOdev.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\WebOdev.AssemblyInfoInputs.cache
 C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\WebOdev.AssemblyInfo.cs
@@ -170,3 +169,10 @@ C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Views\Food\Edit.cshtml
 C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Views\Food\Index.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Views\Chart\Index.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Views\Chart\Statistics.cshtml.g.cs
+C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
+C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\WebOdev.csproj.AssemblyReference.cache

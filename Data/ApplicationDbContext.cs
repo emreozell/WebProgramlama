@@ -7,7 +7,7 @@ using WebOdev.Models;
 
 namespace WebOdev.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<UserDetails>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -16,5 +16,7 @@ namespace WebOdev.Data
 
         public DbSet <Food> Foods { get; set; }
         public DbSet<Category> Categories { get; set; }
+
+        
     }
 }

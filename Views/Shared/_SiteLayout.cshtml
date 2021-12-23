@@ -21,14 +21,22 @@
                 <li><a asp-controller="Food" asp-action="Index">Products</a></li>
                 <li><a asp-controller="Chart" asp-action="Index">Products Chart</a></li>
                 <li><a asp-controller="Chart" asp-action="Statistics">Statistics</a></li>
-                <li><a  asp-area="Identity" asp-page="/Account/Login" >Login</a></li>
-                <li><a  asp-area="Identity" asp-page="/Account/Register">Register</a></li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="Statistics" asp-action="Index" title="Manage">Statistics</a>
+                </li>
+                <li class="nav-item" >
+                    <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <button type="submit" style="height: 50px" class="nav-link btn btn-link text-dark">Logout</button>
+                    </form>
+                </li>
+
+
             </ul>
-        </div> 
+        </div>
     </nav>
 
     <div class="container">
-       @RenderBody()
+        @RenderBody()
     </div>
 
 </body>
