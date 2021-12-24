@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using WebOdev.Data;
 using WebOdev.Models;
 
 namespace WebOdev.Controllers
@@ -18,10 +20,14 @@ namespace WebOdev.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+       
+        public  IActionResult Index()
         {
+         
+
             return View();
         }
+       
 
         public IActionResult Privacy()
         {

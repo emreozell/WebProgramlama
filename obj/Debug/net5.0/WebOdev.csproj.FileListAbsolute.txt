@@ -66,7 +66,6 @@ C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\WebOdev.TagHelpers.input.cac
 C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\WebOdev.TagHelpers.output.cache
 C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\WebOdev.RazorCoreGenerate.cache
 C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -176,3 +175,5 @@ C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Areas\Identity\Pages\A
 C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\WebOdev.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\ASUS\source\repos\WebOdev\obj\Debug\net5.0\Razor\Views\Default\Index.cshtml.g.cs
